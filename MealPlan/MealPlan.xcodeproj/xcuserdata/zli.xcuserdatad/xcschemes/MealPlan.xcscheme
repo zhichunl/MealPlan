@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58F7ADD719EF492F000B61C5"
+               BlueprintIdentifier = "58FD02F019EF4B5A0062A837"
                BuildableName = "MealPlan.app"
                BlueprintName = "MealPlan"
                ReferencedContainer = "container:MealPlan.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58F7ADF019EF4930000B61C5"
+               BlueprintIdentifier = "58FD030919EF4B5A0062A837"
                BuildableName = "MealPlanTests.xctest"
                BlueprintName = "MealPlanTests"
                ReferencedContainer = "container:MealPlan.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58F7ADF019EF4930000B61C5"
+               BlueprintIdentifier = "58FD030919EF4B5A0062A837"
                BuildableName = "MealPlanTests.xctest"
                BlueprintName = "MealPlanTests"
                ReferencedContainer = "container:MealPlan.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58F7ADD719EF492F000B61C5"
+            BlueprintIdentifier = "58FD02F019EF4B5A0062A837"
             BuildableName = "MealPlan.app"
             BlueprintName = "MealPlan"
             ReferencedContainer = "container:MealPlan.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58F7ADD719EF492F000B61C5"
+            BlueprintIdentifier = "58FD02F019EF4B5A0062A837"
             BuildableName = "MealPlan.app"
             BlueprintName = "MealPlan"
             ReferencedContainer = "container:MealPlan.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58F7ADD719EF492F000B61C5"
+            BlueprintIdentifier = "58FD02F019EF4B5A0062A837"
             BuildableName = "MealPlan.app"
             BlueprintName = "MealPlan"
             ReferencedContainer = "container:MealPlan.xcodeproj">
