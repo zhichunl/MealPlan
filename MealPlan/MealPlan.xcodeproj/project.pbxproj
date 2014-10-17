@@ -15,6 +15,7 @@
 		97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */; };
 		97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */; };
 		97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */; };
+		97DA0AC119F191820035F095 /* MPPQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AC019F191820035F095 /* MPPQRViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		97DA0AB919F1859D0035F095 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		97DA0ABA19F1859D0035F095 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		97DA0ABB19F1859D0035F095 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		97DA0ABF19F191820035F095 /* MPPQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPQRViewController.h; sourceTree = "<group>"; };
+		97DA0AC019F191820035F095 /* MPPQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPQRViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				58FD02F919EF4B5A0062A837 /* AppDelegate.m */,
 				97DA0AAE19F1824E0035F095 /* MPPHomeViewController.h */,
 				97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */,
+				97DA0ABF19F191820035F095 /* MPPQRViewController.h */,
+				97DA0AC019F191820035F095 /* MPPQRViewController.m */,
 				97DA0AB119F1852F0035F095 /* External Libraries */,
 				58FD030119EF4B5A0062A837 /* Images.xcassets */,
 				58FD02F419EF4B5A0062A837 /* Supporting Files */,
@@ -251,6 +256,7 @@
 				97DA0AB019F1824E0035F095 /* MPPHomeViewController.m in Sources */,
 				58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */,
 				58FD02F719EF4B5A0062A837 /* main.m in Sources */,
+				97DA0AC119F191820035F095 /* MPPQRViewController.m in Sources */,
 				97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */,
 				97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */,
 				97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */,

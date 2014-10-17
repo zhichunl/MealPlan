@@ -6,8 +6,9 @@
 //  Copyright (c) 2014年 X2YZ. All rights reserved.
 //
 
-#import "MPPHomeViewController.h"
 #import "PureLayout.h"
+#import "MPPHomeViewController.h"
+#import "MPPQRViewController.h"
 
 @interface MPPHomeViewController ()
 
@@ -32,7 +33,17 @@
     [button addTarget:self action:@selector(showDoggie) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"Woof!" forState:UIControlStateNormal];
     [self.view addSubview:button];
-    [button autoCenterInSuperview];
+    [button autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [button autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:40];
+
+    UIButton *startQRButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    startQRButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [startQRButton addTarget:self action:@selector(showQRScanner) forControlEvents:UIControlEventTouchUpInside];
+    [startQRButton setTitle:@"QR!" forState:UIControlStateNormal];
+    [self.view addSubview:startQRButton];
+    [startQRButton autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [startQRButton autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:40];
+
 }
 
 - (void)viewDidLoad {
@@ -44,8 +55,14 @@
 
 - (void)showDoggie {
     [UIView animateWithDuration:1 animations:^{
-        self.doggie.alpha = 1;
+        self.doggie.alpha = !self.doggie.alpha;
     }];
+}
+
+- (void)showQRScanner {
+    MPPQRViewController *QRViewController = [[MPPQRViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:QRViewController];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end
