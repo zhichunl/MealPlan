@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MPPHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window.rootViewController = [[UIViewController alloc] init];
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    window.rootViewController =[[MPPHomeViewController alloc] init];
+    self.window = window;
+    [self.window makeKeyAndVisible] ;
     return YES;
 }
 

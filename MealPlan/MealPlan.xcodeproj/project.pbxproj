@@ -11,6 +11,10 @@
 		58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD02F919EF4B5A0062A837 /* AppDelegate.m */; };
 		58FD030219EF4B5A0062A837 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FD030119EF4B5A0062A837 /* Images.xcassets */; };
 		58FD031119EF4B5A0062A837 /* MealPlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD031019EF4B5A0062A837 /* MealPlanTests.m */; };
+		97DA0AB019F1824E0035F095 /* MPPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */; };
+		97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */; };
+		97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */; };
+		97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,17 @@
 		58FD030A19EF4B5A0062A837 /* MealPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FD030F19EF4B5A0062A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FD031019EF4B5A0062A837 /* MealPlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealPlanTests.m; sourceTree = "<group>"; };
+		97DA0AAE19F1824E0035F095 /* MPPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPHomeViewController.h; sourceTree = "<group>"; };
+		97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPHomeViewController.m; sourceTree = "<group>"; };
+		97DA0AB319F1859D0035F095 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		97DA0AB519F1859D0035F095 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		97DA0AB719F1859D0035F095 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		97DA0AB919F1859D0035F095 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		97DA0ABA19F1859D0035F095 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		97DA0ABB19F1859D0035F095 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +91,9 @@
 			children = (
 				58FD02F819EF4B5A0062A837 /* AppDelegate.h */,
 				58FD02F919EF4B5A0062A837 /* AppDelegate.m */,
+				97DA0AAE19F1824E0035F095 /* MPPHomeViewController.h */,
+				97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */,
+				97DA0AB119F1852F0035F095 /* External Libraries */,
 				58FD030119EF4B5A0062A837 /* Images.xcassets */,
 				58FD02F419EF4B5A0062A837 /* Supporting Files */,
 			);
@@ -106,6 +124,30 @@
 				58FD030F19EF4B5A0062A837 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97DA0AB119F1852F0035F095 /* External Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				97DA0AB219F1859D0035F095 /* PureLayout */,
+			);
+			path = "External Libraries";
+			sourceTree = "<group>";
+		};
+		97DA0AB219F1859D0035F095 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				97DA0AB319F1859D0035F095 /* ALView+PureLayout.h */,
+				97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */,
+				97DA0AB519F1859D0035F095 /* NSArray+PureLayout.h */,
+				97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */,
+				97DA0AB719F1859D0035F095 /* NSLayoutConstraint+PureLayout.h */,
+				97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */,
+				97DA0AB919F1859D0035F095 /* PureLayout+Internal.h */,
+				97DA0ABA19F1859D0035F095 /* PureLayout.h */,
+				97DA0ABB19F1859D0035F095 /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DA0AB019F1824E0035F095 /* MPPHomeViewController.m in Sources */,
 				58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */,
 				58FD02F719EF4B5A0062A837 /* main.m in Sources */,
+				97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */,
+				97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */,
+				97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +425,7 @@
 				58FD031619EF4B5A0062A837 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58FD031719EF4B5A0062A837 /* Build configuration list for PBXNativeTarget "MealPlanTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +434,7 @@
 				58FD031919EF4B5A0062A837 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
