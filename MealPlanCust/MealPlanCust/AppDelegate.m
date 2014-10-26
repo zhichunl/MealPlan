@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "MHCLoginViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "PFCustomer.h"
 @interface AppDelegate ()
 
 @end
@@ -17,8 +19,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse setApplicationId:@"g20pic1llOjxp3NbQ0K2BOlZUyuV2wkB6NA5pfvD"
-                  clientKey:@"8wNnr3kV0jrq1w6gzofaNCR2YTmUeCIuoWxJb5sx"];
+    [FBLoginView class];
+    [PFCustomer registerSubclass];
+    [Parse setApplicationId:@"Ana8uuDGOzss5pSfm601do1BStWqojasHz3xELDw"
+                  clientKey:@"mDno0UXB8JPAiy8jGj225C9mfwst5o4zBSXtliD0"];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                         UIUserNotificationTypeBadge |
@@ -36,6 +40,12 @@
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    // You can add your app-specific url handling code here if needed
+    return wasHandled;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

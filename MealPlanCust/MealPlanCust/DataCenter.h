@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import "PFCustomer.h"
+
+@protocol AlertToMoveOn;
 
 @interface DataCenter : NSObject
-
++(instancetype)sharedCenter;
+-(void)registerUser:(id<FBGraphUser>)user delegate:(id<AlertToMoveOn>)del;
+-(void)loginUser:(id<FBGraphUser>)user delegate:(id<AlertToMoveOn>)delegate;
+@property (strong, nonatomic) PFCustomer* currentUser;
+@end
+@protocol AlertToMoveOn <NSObject>
+-(void)moveOnToTableView;
 @end
