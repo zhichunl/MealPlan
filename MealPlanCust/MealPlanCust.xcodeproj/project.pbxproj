@@ -36,6 +36,7 @@
 		58F50BAD19FDCCFC00357533 /* CurrentOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BAC19FDCCFC00357533 /* CurrentOrdersTableViewController.m */; };
 		58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BAF19FDCD4400357533 /* QRCodeViewController.m */; };
 		58F50BB219FDCD4400357533 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F50BB019FDCD4400357533 /* QRCodeViewController.xib */; };
+		58F50BB519FDCDF700357533 /* PFRestaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BB419FDCDF700357533 /* PFRestaurants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		58F50BAE19FDCD4400357533 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		58F50BAF19FDCD4400357533 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		58F50BB019FDCD4400357533 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		58F50BB319FDCDF700357533 /* PFRestaurants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFRestaurants.h; path = ../PFRestaurants.h; sourceTree = "<group>"; };
+		58F50BB419FDCDF700357533 /* PFRestaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFRestaurants.m; path = ../PFRestaurants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 			children = (
 				5842868D19FD81A900FC51F1 /* PFCustomer.h */,
 				5842868E19FD81A900FC51F1 /* PFCustomer.m */,
+				58F50BB319FDCDF700357533 /* PFRestaurants.h */,
+				58F50BB419FDCDF700357533 /* PFRestaurants.m */,
 				58D56E3019FB5D460090E366 /* DataCenter.h */,
 				58D56E3119FB5D460090E366 /* DataCenter.m */,
 				585C313219FB5B3200ED9D78 /* MHCLoginViewController.h */,
@@ -331,6 +336,7 @@
 				58CD2BE119FB51D60009EAA3 /* AppDelegate.m in Sources */,
 				58D56E2E19FB5D150090E366 /* MTTableViewCell.m in Sources */,
 				58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */,
+				58F50BB519FDCDF700357533 /* PFRestaurants.m in Sources */,
 				58D56E3219FB5D460090E366 /* DataCenter.m in Sources */,
 				58D56E2A19FB5CF60090E366 /* MealTableTableViewController.m in Sources */,
 				5842868F19FD81A900FC51F1 /* PFCustomer.m in Sources */,

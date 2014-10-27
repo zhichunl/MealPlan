@@ -9,7 +9,7 @@
 #import "MealTableTableViewController.h"
 
 @interface MealTableTableViewController ()
-
+@property (strong, nonatomic) NSArray *restaurants;
 @end
 
 @implementation MealTableTableViewController

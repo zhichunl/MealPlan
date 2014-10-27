@@ -11,6 +11,7 @@
 #import "MHCLoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "PFCustomer.h"
+#import "PFRestaurants.h"
 @interface AppDelegate ()
 
 @end
@@ -21,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [FBLoginView class];
     [PFCustomer registerSubclass];
+    [PFRestaurants registerSubclass];
     [Parse setApplicationId:@"Ana8uuDGOzss5pSfm601do1BStWqojasHz3xELDw"
                   clientKey:@"mDno0UXB8JPAiy8jGj225C9mfwst5o4zBSXtliD0"];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
