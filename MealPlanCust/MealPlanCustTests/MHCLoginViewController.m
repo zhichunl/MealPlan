@@ -11,7 +11,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "DataCenter.h"
 #import "MealTableTableViewController.h"
-#import "CurrentOrderViewController.h"
+#import "CurrentOrdersTableViewController.h"
 #import "SummaryViewController.h"
 #import "PFCustomer.h"
 
@@ -51,7 +51,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         UITabBarController *tabBar = [[UITabBarController alloc] init];
         MealTableTableViewController *table = [[MealTableTableViewController alloc] init];
-        CurrentOrderViewController *cO = [[CurrentOrderViewController alloc] init];
+        CurrentOrdersTableViewController *cO = [[CurrentOrdersTableViewController alloc] init];
         SummaryViewController *svc = [[SummaryViewController alloc] init];
         tabBar.viewControllers = @[table, cO, svc];
         [self.navigationController pushViewController:tabBar animated:YES];

@@ -1,18 +1,18 @@
 //
-//  CurrentOrderViewController.m
+//  QRCodeViewController.m
 //  MealPlanCust
 //
 //  Created by Zhichun Li on 10/26/14.
 //  Copyright (c) 2014 X2YZ. All rights reserved.
 //
 
-#import "CurrentOrderViewController.h"
+#import "QRCodeViewController.h"
 
-@interface CurrentOrderViewController ()
+@interface QRCodeViewController ()
 
 @end
 
-@implementation CurrentOrderViewController
+@implementation QRCodeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  CurrentOrderViewController.h
+//  QRCodeViewController.h
 //  MealPlanCust
 //
 //  Created by Zhichun Li on 10/26/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CurrentOrderViewController : UIViewController
+@interface QRCodeViewController : UIViewController
 
 @end

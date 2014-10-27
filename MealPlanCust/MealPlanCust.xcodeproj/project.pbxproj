@@ -10,8 +10,6 @@
 		5842868F19FD81A900FC51F1 /* PFCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842868E19FD81A900FC51F1 /* PFCustomer.m */; };
 		5842869319FD9B9E00FC51F1 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842869119FD9B9E00FC51F1 /* SummaryViewController.m */; };
 		5842869419FD9B9E00FC51F1 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5842869219FD9B9E00FC51F1 /* SummaryViewController.xib */; };
-		5842869819FDAAF400FC51F1 /* CurrentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842869619FDAAF400FC51F1 /* CurrentOrderViewController.m */; };
-		5842869919FDAAF400FC51F1 /* CurrentOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5842869719FDAAF400FC51F1 /* CurrentOrderViewController.xib */; };
 		585C311A19FB595D00ED9D78 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C311919FB595D00ED9D78 /* FacebookSDK.framework */; };
 		585C311C19FB59CF00ED9D78 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C311B19FB59CF00ED9D78 /* Parse.framework */; };
 		585C311E19FB5A0000ED9D78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C311D19FB5A0000ED9D78 /* AudioToolbox.framework */; };
@@ -35,6 +33,9 @@
 		58D56E3219FB5D460090E366 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D56E3119FB5D460090E366 /* DataCenter.m */; };
 		58D56E3619FB5D740090E366 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D56E3419FB5D740090E366 /* MTDetailViewController.m */; };
 		58D56E3719FB5D740090E366 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D56E3519FB5D740090E366 /* MTDetailViewController.xib */; };
+		58F50BAD19FDCCFC00357533 /* CurrentOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BAC19FDCCFC00357533 /* CurrentOrdersTableViewController.m */; };
+		58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BAF19FDCD4400357533 /* QRCodeViewController.m */; };
+		58F50BB219FDCD4400357533 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F50BB019FDCD4400357533 /* QRCodeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +54,6 @@
 		5842869019FD9B9E00FC51F1 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
 		5842869119FD9B9E00FC51F1 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		5842869219FD9B9E00FC51F1 /* SummaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryViewController.xib; sourceTree = "<group>"; };
-		5842869519FDAAF400FC51F1 /* CurrentOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderViewController.h; sourceTree = "<group>"; };
-		5842869619FDAAF400FC51F1 /* CurrentOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderViewController.m; sourceTree = "<group>"; };
-		5842869719FDAAF400FC51F1 /* CurrentOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentOrderViewController.xib; sourceTree = "<group>"; };
 		585C311919FB595D00ED9D78 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		585C311B19FB59CF00ED9D78 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		585C311D19FB5A0000ED9D78 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -89,6 +87,11 @@
 		58D56E3319FB5D740090E366 /* MTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
 		58D56E3419FB5D740090E366 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
 		58D56E3519FB5D740090E366 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
+		58F50BAB19FDCCFC00357533 /* CurrentOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrdersTableViewController.h; sourceTree = "<group>"; };
+		58F50BAC19FDCCFC00357533 /* CurrentOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrdersTableViewController.m; sourceTree = "<group>"; };
+		58F50BAE19FDCD4400357533 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		58F50BAF19FDCD4400357533 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		58F50BB019FDCD4400357533 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +182,11 @@
 				5842869019FD9B9E00FC51F1 /* SummaryViewController.h */,
 				5842869119FD9B9E00FC51F1 /* SummaryViewController.m */,
 				5842869219FD9B9E00FC51F1 /* SummaryViewController.xib */,
-				5842869519FDAAF400FC51F1 /* CurrentOrderViewController.h */,
-				5842869619FDAAF400FC51F1 /* CurrentOrderViewController.m */,
-				5842869719FDAAF400FC51F1 /* CurrentOrderViewController.xib */,
+				58F50BAB19FDCCFC00357533 /* CurrentOrdersTableViewController.h */,
+				58F50BAC19FDCCFC00357533 /* CurrentOrdersTableViewController.m */,
+				58F50BAE19FDCD4400357533 /* QRCodeViewController.h */,
+				58F50BAF19FDCD4400357533 /* QRCodeViewController.m */,
+				58F50BB019FDCD4400357533 /* QRCodeViewController.xib */,
 				58CD2BDF19FB51D60009EAA3 /* AppDelegate.h */,
 				58CD2BE019FB51D60009EAA3 /* AppDelegate.m */,
 				58CD2BE819FB51D60009EAA3 /* Images.xcassets */,
@@ -300,7 +305,7 @@
 				58D56E3719FB5D740090E366 /* MTDetailViewController.xib in Resources */,
 				58CD2BE919FB51D60009EAA3 /* Images.xcassets in Resources */,
 				5842869419FD9B9E00FC51F1 /* SummaryViewController.xib in Resources */,
-				5842869919FDAAF400FC51F1 /* CurrentOrderViewController.xib in Resources */,
+				58F50BB219FDCD4400357533 /* QRCodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,13 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F50BAD19FDCCFC00357533 /* CurrentOrdersTableViewController.m in Sources */,
 				58CD2C0B19FB53790009EAA3 /* main.m in Sources */,
-				5842869819FDAAF400FC51F1 /* CurrentOrderViewController.m in Sources */,
 				58D56E3619FB5D740090E366 /* MTDetailViewController.m in Sources */,
 				5842869319FD9B9E00FC51F1 /* SummaryViewController.m in Sources */,
 				585C313419FB5B3200ED9D78 /* MHCLoginViewController.m in Sources */,
 				58CD2BE119FB51D60009EAA3 /* AppDelegate.m in Sources */,
 				58D56E2E19FB5D150090E366 /* MTTableViewCell.m in Sources */,
+				58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */,
 				58D56E3219FB5D460090E366 /* DataCenter.m in Sources */,
 				58D56E2A19FB5CF60090E366 /* MealTableTableViewController.m in Sources */,
 				5842868F19FD81A900FC51F1 /* PFCustomer.m in Sources */,
