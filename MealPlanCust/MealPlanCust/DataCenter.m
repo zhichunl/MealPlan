@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "PFCustomer.h"
+#import "PFRestaurants.h"
 
 @implementation DataCenter
 
@@ -45,6 +46,24 @@
     dispatch_async(queue, ^{
         weaksel.currentUser = (PFCustomer *)[query getFirstObject];
         [delegate moveOnToTableView];
+    });
+}
+
+-(void)fetchForBusiness:(id<RestaurantsDataFetched>)delegate{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        PFQuery *query = [PFRestaurants query];
+        [query whereKey:@"expected_delivery_time" greaterThanOrEqualTo:[NSDate date]];
+        NSMutableArray *objects = [[query findObjects] mutableCopy];
+        NSMutableArray *businesses = [NSMutableArray array];
+        for (PFRestaurants *r in objects){
+            PFRestaurants *fr = (PFRestaurants *)[r fetchIfNeeded];
+            [businesses addObject:fr];
+        }
+        [objects sortUsingComparator:^NSComparisonResult(PFRestaurants *r1, PFRestaurants*r2) {
+            return [r1.expected_delivery_time compare:r2.expected_delivery_time];
+        }];
+        [delegate dataFetched:[businesses copy]];
     });
 }
 

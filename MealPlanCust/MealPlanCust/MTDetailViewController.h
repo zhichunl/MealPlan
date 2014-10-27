@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PFRestaurants.h"
 
 @interface MTDetailViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *deliveryTime;
+@property (weak, nonatomic) IBOutlet UITableView *menuItems;
+@property (strong, nonatomic) PFRestaurants *curRestaurant;
+@property (strong, nonatomic) NSArray *menu;
 @end
