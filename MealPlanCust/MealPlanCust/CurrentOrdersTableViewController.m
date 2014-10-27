@@ -18,7 +18,7 @@
     [super viewDidLoad];
     UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
     self.tableView.contentInset = inset;
-    self.tabBarController.navigationItem.title = @"Current Orders";
+    self.navigationItem.title = @"Current Orders";
 }
 
 - (void)didReceiveMemoryWarning {

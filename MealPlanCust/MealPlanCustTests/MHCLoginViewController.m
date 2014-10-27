@@ -51,9 +51,13 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         UITabBarController *tabBar = [[UITabBarController alloc] init];
         MealTableTableViewController *table = [[MealTableTableViewController alloc] init];
+        UINavigationController *mnav = [[UINavigationController alloc] initWithRootViewController:table];
         CurrentOrdersTableViewController *cO = [[CurrentOrdersTableViewController alloc] init];
+        UINavigationController *cnav = [[UINavigationController alloc] initWithRootViewController:cO];
         SummaryViewController *svc = [[SummaryViewController alloc] init];
-        tabBar.viewControllers = @[table, cO, svc];
+        UINavigationController *snav = [[UINavigationController alloc] initWithRootViewController:svc];
+        tabBar.viewControllers = @[mnav, cnav, snav];
+        self.navigationController.navigationBarHidden = YES;
         [self.navigationController pushViewController:tabBar animated:YES];
     });
 }

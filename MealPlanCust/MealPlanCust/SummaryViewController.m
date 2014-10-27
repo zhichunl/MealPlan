@@ -16,12 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.navigationItem.title = @"Summary";
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"Summary";
+    self.navigationItem.title = @"Summary";
 }
 
 - (void)didReceiveMemoryWarning {

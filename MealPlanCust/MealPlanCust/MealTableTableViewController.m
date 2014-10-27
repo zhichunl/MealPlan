@@ -10,6 +10,7 @@
 #import "DataCenter.h"
 #import "MTTableViewCell.h"
 #import "PFRestaurants.h"
+#import "MTDetailViewController.h"
 
 @interface MealTableTableViewController ()<RestaurantsDataFetched>
 @property (strong, nonatomic) NSArray *restaurants;
@@ -20,8 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.navigationItem.hidesBackButton = YES;
-    self.tabBarController.navigationItem.title = @"Restaurants";
+    self.navigationItem.title = @"Restaurants";
     [[DataCenter sharedCenter] fetchForBusiness:self];
     UINib *nib = [UINib nibWithNibName:@"MTTableViewCell" bundle:nil];
     [self.tableView registerNib:nib
@@ -29,11 +29,6 @@
     self.refreshControl = [[UIRefreshControl alloc]init];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@""];
     [self.refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"Restaurants";
 }
 
 -(void)updateTable{
@@ -74,7 +69,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    MTDetailViewController *dvc = [[MTDetailViewController alloc] init];
+    dvc.curRestaurant = [self.restaurants objectAtIndex:indexPath.row];
+    dvc.menu = dvc.curRestaurant.menu;
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 /*
