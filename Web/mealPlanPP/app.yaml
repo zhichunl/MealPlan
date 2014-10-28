@@ -10,7 +10,7 @@ handlers:
   static_dir: static/assets
 
 - url: /.*
-  script: mealPlanPP.application
+  script: routing.app
 
 libraries:
 - name: webapp2
