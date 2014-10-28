@@ -1,39 +1,24 @@
 //
-//  MealTableTableViewController.m
+//  CurrentOrdersTableViewController.m
 //  MealPlanCust
 //
-//  Created by Zhichun Li on 10/25/14.
+//  Created by Zhichun Li on 10/26/14.
 //  Copyright (c) 2014 X2YZ. All rights reserved.
 //
 
-#import "MealTableTableViewController.h"
-#import "DataCenter.h"
-#import "MTTableViewCell.h"
-#import "PFRestaurants.h"
-#import "MTDetailViewController.h"
+#import "CurrentOrdersTableViewController.h"
 
-@interface MealTableTableViewController ()<RestaurantsDataFetched>
-@property (strong, nonatomic) NSArray *restaurants;
-@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@interface CurrentOrdersTableViewController ()
+
 @end
 
-@implementation MealTableTableViewController
+@implementation CurrentOrdersTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Restaurants";
-    [[DataCenter sharedCenter] fetchForBusiness:self];
-    UINib *nib = [UINib nibWithNibName:@"MTTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib
-         forCellReuseIdentifier:@"MTTableViewCell"];
-    self.refreshControl = [[UIRefreshControl alloc]init];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@""];
-    [self.refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
-}
-
--(void)updateTable{
-    [[DataCenter sharedCenter] fetchForBusiness:self];
-    [self.refreshControl endRefreshing];
+    UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
+    self.tableView.contentInset = inset;
+    self.navigationItem.title = @"Current Orders";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,39 +26,34 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)dataFetched:(NSArray *)businesses{
-    self.restaurants = businesses;
-    [self.tableView reloadData];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.navigationItem.title = @"Current Orders";
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.restaurants count];
+    return 0;
 }
 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MTTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MTTableViewCell" forIndexPath:indexPath];
-    PFRestaurants *curRestaurant = [self.restaurants objectAtIndex:indexPath.row];
-    cell.name.text = curRestaurant.restaurant_name;
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
-    cell.deliveryTime.text = [formatter stringFromDate:curRestaurant.expected_delivery_time];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    MTDetailViewController *dvc = [[MTDetailViewController alloc] init];
-    dvc.curRestaurant = [self.restaurants objectAtIndex:indexPath.row];
-    dvc.menu = dvc.curRestaurant.menu;
-    [self.navigationController pushViewController:dvc animated:YES];
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -8,7 +8,7 @@
 
 #import "MTDetailViewController.h"
 
-@interface MTDetailViewController ()
+@interface MTDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UINib *nib = [UINib nibWithNibName:@"UITableViewCell" bundle:nil];
+    [self.menuItems registerNib:nib
+         forCellReuseIdentifier:@"UITableViewCell"];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,14 +27,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)payWithStripe:(id)sender {
+    
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    NSString *name = [self.menu objectAtIndex:indexPath.row];
+    cell.textLabel.text = name;
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return [self.menu count];
+}
 
 @end

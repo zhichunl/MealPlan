@@ -9,10 +9,14 @@
 #import "MHCLoginViewController.h"
 #import "Parse/Parse.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "DataCenter.h"
+#import "MealTableTableViewController.h"
+#import "CurrentOrdersTableViewController.h"
+#import "SummaryViewController.h"
+#import "PFCustomer.h"
 
-@interface MHCLoginViewController ()<UIAlertViewDelegate, FBLoginViewDelegate>
+@interface MHCLoginViewController ()<FBLoginViewDelegate, AlertToMoveOn>
 @property (atomic, assign) BOOL registered;
-@property (strong, nonatomic) UIAlertView *message;
 @end
 
 @implementation MHCLoginViewController
@@ -29,24 +33,34 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     if (!self.registered){
-        PFQuery *forUser = [PFUser query];
-        [forUser whereKey:@"profileID" equalTo:user.objectID];
+        PFQuery *forUser = [PFCustomer query];
+        [forUser whereKey:@"FBID" equalTo:user.objectID];
         [forUser findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
             if ([objects count] == 0){
-                //[[FBUDataCenter sharedCenter] registerUser:user];
+                [[DataCenter sharedCenter] registerUser:user delegate:self];
             }
             else {
-                //[[FBUDataCenter sharedCenter] loginUser:user];
+                [[DataCenter sharedCenter] loginUser:user delegate:self];
             }
         }];
         self.registered = YES;
     }
 }
 
-//the action after user login.
-//-(void)loginViewShowingLoggedInUser:(FBLoginView *)loginView{
-//    [self _loadAlertView];
-//}
+-(void)moveOnToTableView{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UITabBarController *tabBar = [[UITabBarController alloc] init];
+        MealTableTableViewController *table = [[MealTableTableViewController alloc] init];
+        UINavigationController *mnav = [[UINavigationController alloc] initWithRootViewController:table];
+        CurrentOrdersTableViewController *cO = [[CurrentOrdersTableViewController alloc] init];
+        UINavigationController *cnav = [[UINavigationController alloc] initWithRootViewController:cO];
+        SummaryViewController *svc = [[SummaryViewController alloc] init];
+        UINavigationController *snav = [[UINavigationController alloc] initWithRootViewController:svc];
+        tabBar.viewControllers = @[mnav, cnav, snav];
+        self.navigationController.navigationBarHidden = YES;
+        [self.navigationController pushViewController:tabBar animated:YES];
+    });
+}
 
 
 -(void)viewWillAppear:(BOOL)animated{

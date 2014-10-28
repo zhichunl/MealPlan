@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MTTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *deliveryTime;
 @end
