@@ -7,7 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "MPPHomeViewController.h"
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
+
+
+#import "MPPHomeTabViewController.h"
+#import "MPPPickUpInfoViewController.h"
+#import "MPPQRScanViewController.h"
+#import "MPPCheckListViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +26,38 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[[MPPHomeViewController alloc] init]];
-    window.rootViewController = navController;
+    
+    //  initalize the tab controller and feed it with our three tabs
+    //  wrapped in nav controllers
+    MPPHomeTabViewController *homeTab = [[MPPHomeTabViewController alloc] init];
+    MPPPickUpInfoViewController *pickUpTab = [[MPPPickUpInfoViewController alloc] init];
+    MPPQRScanViewController *qrTab = [[MPPQRScanViewController alloc] init];
+    MPPCheckListViewController *checklistTab = [[MPPCheckListViewController alloc] init];
+    UINavigationController *pickUpNav = [self wrapWithNavController:pickUpTab];
+    UINavigationController *qrNav = [self wrapWithNavController:qrTab];
+    UINavigationController *checklistNav = [self wrapWithNavController:checklistTab];
+    homeTab.viewControllers = @[pickUpNav, qrNav, checklistNav];
+
+    // add the tab icons
+    pickUpNav.tabBarItem.title = @"Info";
+    pickUpNav.tabBarItem.image = [UIImage imageNamed:@"48-fork-and-knife"];
+    qrNav.tabBarItem.title = @"QR Code Scanner";
+    qrNav.tabBarItem.image = [UIImage imageNamed:@"195-barcode"];
+    checklistNav.tabBarItem.title = @"Checklist";
+    checklistNav.tabBarItem.image = [UIImage imageNamed:@"117-todo"];
+    
+    window.rootViewController = homeTab;
+    
     self.window = window;
-    [self.window makeKeyAndVisible] ;
+    [self.window makeKeyAndVisible];
+    
+    [Fabric with:@[TwitterKit]];
     return YES;
+}
+
+- (UINavigationController *)wrapWithNavController:(UIViewController *)vc {
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    return nc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

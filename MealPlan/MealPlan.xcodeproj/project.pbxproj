@@ -11,7 +11,15 @@
 		58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD02F919EF4B5A0062A837 /* AppDelegate.m */; };
 		58FD030219EF4B5A0062A837 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FD030119EF4B5A0062A837 /* Images.xcassets */; };
 		58FD031119EF4B5A0062A837 /* MealPlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD031019EF4B5A0062A837 /* MealPlanTests.m */; };
-		97DA0AB019F1824E0035F095 /* MPPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */; };
+		97274A3C1A0341D900797D60 /* MPPHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */; };
+		97274A401A0344ED00797D60 /* MPPGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 97274A3F1A0344ED00797D60 /* MPPGlobals.m */; };
+		97A23CCF1A032F9B0074908C /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A23CCC1A032F9B0074908C /* TwitterKit.framework */; };
+		97A23CD01A032F9C0074908C /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97A23CCD1A032F9B0074908C /* TwitterKitResources.bundle */; };
+		97A23CD11A032F9C0074908C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A23CCE1A032F9B0074908C /* Fabric.framework */; };
+		97A23CD71A0336D80074908C /* MPPPickUpInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A23CD61A0336D80074908C /* MPPPickUpInfoViewController.m */; };
+		97A23CDA1A0336F60074908C /* MPPQRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A23CD91A0336F60074908C /* MPPQRScanViewController.m */; };
+		97A23CDD1A03372E0074908C /* MPPCheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */; };
+		97DA0AB019F1824E0035F095 /* MPPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AAF19F1824E0035F095 /* MPPLoginViewController.m */; };
 		97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */; };
 		97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */; };
 		97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */; };
@@ -38,8 +46,21 @@
 		58FD030A19EF4B5A0062A837 /* MealPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FD030F19EF4B5A0062A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FD031019EF4B5A0062A837 /* MealPlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealPlanTests.m; sourceTree = "<group>"; };
-		97DA0AAE19F1824E0035F095 /* MPPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPHomeViewController.h; sourceTree = "<group>"; };
-		97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPHomeViewController.m; sourceTree = "<group>"; };
+		97274A3A1A0341D900797D60 /* MPPHomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPHomeTabViewController.h; sourceTree = "<group>"; };
+		97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPHomeTabViewController.m; sourceTree = "<group>"; };
+		97274A3E1A0344ED00797D60 /* MPPGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPPGlobals.h; path = ../MPPGlobals.h; sourceTree = "<group>"; };
+		97274A3F1A0344ED00797D60 /* MPPGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPPGlobals.m; path = ../MPPGlobals.m; sourceTree = "<group>"; };
+		97A23CCC1A032F9B0074908C /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		97A23CCD1A032F9B0074908C /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		97A23CCE1A032F9B0074908C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		97A23CD51A0336D80074908C /* MPPPickUpInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPPickUpInfoViewController.h; sourceTree = "<group>"; };
+		97A23CD61A0336D80074908C /* MPPPickUpInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPPickUpInfoViewController.m; sourceTree = "<group>"; };
+		97A23CD81A0336F60074908C /* MPPQRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPQRScanViewController.h; sourceTree = "<group>"; };
+		97A23CD91A0336F60074908C /* MPPQRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPQRScanViewController.m; sourceTree = "<group>"; };
+		97A23CDB1A03372E0074908C /* MPPCheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPCheckListViewController.h; sourceTree = "<group>"; };
+		97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPCheckListViewController.m; sourceTree = "<group>"; };
+		97DA0AAE19F1824E0035F095 /* MPPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPLoginViewController.h; sourceTree = "<group>"; };
+		97DA0AAF19F1824E0035F095 /* MPPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPLoginViewController.m; sourceTree = "<group>"; };
 		97DA0AB319F1859D0035F095 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
 		97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
 		97DA0AB519F1859D0035F095 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
@@ -58,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A23CCF1A032F9B0074908C /* TwitterKit.framework in Frameworks */,
+				97A23CD11A032F9C0074908C /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +97,9 @@
 		58FD02E819EF4B5A0062A837 = {
 			isa = PBXGroup;
 			children = (
+				97A23CCC1A032F9B0074908C /* TwitterKit.framework */,
+				97A23CCD1A032F9B0074908C /* TwitterKitResources.bundle */,
+				97A23CCE1A032F9B0074908C /* Fabric.framework */,
 				58FD02F319EF4B5A0062A837 /* MealPlan */,
 				58FD030D19EF4B5A0062A837 /* MealPlanTests */,
 				58FD02F219EF4B5A0062A837 /* Products */,
@@ -92,10 +118,20 @@
 		58FD02F319EF4B5A0062A837 /* MealPlan */ = {
 			isa = PBXGroup;
 			children = (
+				97274A3E1A0344ED00797D60 /* MPPGlobals.h */,
+				97274A3F1A0344ED00797D60 /* MPPGlobals.m */,
 				58FD02F819EF4B5A0062A837 /* AppDelegate.h */,
 				58FD02F919EF4B5A0062A837 /* AppDelegate.m */,
-				97DA0AAE19F1824E0035F095 /* MPPHomeViewController.h */,
-				97DA0AAF19F1824E0035F095 /* MPPHomeViewController.m */,
+				97DA0AAE19F1824E0035F095 /* MPPLoginViewController.h */,
+				97DA0AAF19F1824E0035F095 /* MPPLoginViewController.m */,
+				97274A3A1A0341D900797D60 /* MPPHomeTabViewController.h */,
+				97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */,
+				97A23CD51A0336D80074908C /* MPPPickUpInfoViewController.h */,
+				97A23CD61A0336D80074908C /* MPPPickUpInfoViewController.m */,
+				97A23CD81A0336F60074908C /* MPPQRScanViewController.h */,
+				97A23CD91A0336F60074908C /* MPPQRScanViewController.m */,
+				97A23CDB1A03372E0074908C /* MPPCheckListViewController.h */,
+				97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */,
 				97DA0ABF19F191820035F095 /* MPPQRViewController.h */,
 				97DA0AC019F191820035F095 /* MPPQRViewController.m */,
 				97DA0AB119F1852F0035F095 /* External Libraries */,
@@ -165,6 +201,7 @@
 				58FD02ED19EF4B5A0062A837 /* Sources */,
 				58FD02EE19EF4B5A0062A837 /* Frameworks */,
 				58FD02EF19EF4B5A0062A837 /* Resources */,
+				97A23CCB1A032F470074908C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A23CD01A032F9C0074908C /* TwitterKitResources.bundle in Resources */,
 				58FD030219EF4B5A0062A837 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,17 +286,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97A23CCB1A032F470074908C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 43f1e728a1d87aaa9b0678cbdaeddb88f5390ea3 f78d2484ab19a373b2cdcbab05340dab69f11267408d66f675d297b00a726621";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58FD02ED19EF4B5A0062A837 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DA0AB019F1824E0035F095 /* MPPHomeViewController.m in Sources */,
+				97274A3C1A0341D900797D60 /* MPPHomeTabViewController.m in Sources */,
+				97DA0AB019F1824E0035F095 /* MPPLoginViewController.m in Sources */,
 				58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */,
 				58FD02F719EF4B5A0062A837 /* main.m in Sources */,
+				97274A401A0344ED00797D60 /* MPPGlobals.m in Sources */,
 				97DA0AC119F191820035F095 /* MPPQRViewController.m in Sources */,
+				97A23CDD1A03372E0074908C /* MPPCheckListViewController.m in Sources */,
+				97A23CD71A0336D80074908C /* MPPPickUpInfoViewController.m in Sources */,
 				97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */,
 				97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */,
+				97A23CDA1A0336F60074908C /* MPPQRScanViewController.m in Sources */,
 				97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
