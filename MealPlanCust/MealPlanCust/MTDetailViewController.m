@@ -7,6 +7,7 @@
 //
 
 #import "MTDetailViewController.h"
+#import "PaymentViewController.h"
 
 @interface MTDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -28,7 +29,13 @@
 }
 
 - (IBAction)payWithStripe:(id)sender {
-    
+    PaymentViewController *pvc = [[PaymentViewController alloc] init];
+    pvc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss)];
+    [self.navigationController pushViewController:pvc animated:YES];
+}
+
+-(void)dismiss{
+    [self.navigationController popToViewController:self animated:YES];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
