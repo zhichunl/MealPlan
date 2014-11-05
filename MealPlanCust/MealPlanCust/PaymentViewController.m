@@ -50,7 +50,7 @@
 
 
 - (void)createBackendChargeWithToken:(STPToken *)token{
-    NSURL *url = [NSURL URLWithString:@"https://example.com/token"];
+    NSURL *url = [NSURL URLWithString:@"https://mealplanpp.appspot.com"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body = [NSString stringWithFormat:@"stripeToken=%@", token.tokenId];
