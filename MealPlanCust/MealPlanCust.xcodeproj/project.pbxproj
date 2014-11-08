@@ -23,6 +23,7 @@
 		585C312E19FB5A3E00ED9D78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C312D19FB5A3E00ED9D78 /* StoreKit.framework */; };
 		585C313019FB5A4A00ED9D78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C312F19FB5A4A00ED9D78 /* SystemConfiguration.framework */; };
 		585C313419FB5B3200ED9D78 /* MHCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C313319FB5B3200ED9D78 /* MHCLoginViewController.m */; };
+		588743391A091F950045430E /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588743381A091F950045430E /* PaymentViewController.m */; };
 		58CD2BE119FB51D60009EAA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CD2BE019FB51D60009EAA3 /* AppDelegate.m */; };
 		58CD2BE919FB51D60009EAA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58CD2BE819FB51D60009EAA3 /* Images.xcassets */; };
 		58CD2BF819FB51D60009EAA3 /* MealPlanCustTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CD2BF719FB51D60009EAA3 /* MealPlanCustTests.m */; };
@@ -37,6 +38,7 @@
 		58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BAF19FDCD4400357533 /* QRCodeViewController.m */; };
 		58F50BB219FDCD4400357533 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F50BB019FDCD4400357533 /* QRCodeViewController.xib */; };
 		58F50BB519FDCDF700357533 /* PFRestaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F50BB419FDCDF700357533 /* PFRestaurants.m */; };
+		AB178D7D125AF1FC4705EED5 /* libPods-MealPlanCust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F58C4419FDBAC3A7C4D054 /* libPods-MealPlanCust.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42EEE4A96EAA910192E89C86 /* Pods-MealPlanCust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealPlanCust.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MealPlanCust/Pods-MealPlanCust.debug.xcconfig"; sourceTree = "<group>"; };
 		5842868D19FD81A900FC51F1 /* PFCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFCustomer.h; sourceTree = "<group>"; };
 		5842868E19FD81A900FC51F1 /* PFCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCustomer.m; sourceTree = "<group>"; };
 		5842869019FD9B9E00FC51F1 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 		585C312F19FB5A4A00ED9D78 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		585C313219FB5B3200ED9D78 /* MHCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHCLoginViewController.h; path = MealPlanCustTests/MHCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		585C313319FB5B3200ED9D78 /* MHCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHCLoginViewController.m; path = MealPlanCustTests/MHCLoginViewController.m; sourceTree = SOURCE_ROOT; };
+		588743371A091F950045430E /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		588743381A091F950045430E /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 		58CD2BD819FB51D60009EAA3 /* MealPlanCust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealPlanCust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58CD2BDC19FB51D60009EAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58CD2BDD19FB51D60009EAA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +100,8 @@
 		58F50BB019FDCD4400357533 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		58F50BB319FDCDF700357533 /* PFRestaurants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFRestaurants.h; path = ../PFRestaurants.h; sourceTree = "<group>"; };
 		58F50BB419FDCDF700357533 /* PFRestaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFRestaurants.m; path = ../PFRestaurants.m; sourceTree = "<group>"; };
+		80F58C4419FDBAC3A7C4D054 /* libPods-MealPlanCust.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MealPlanCust.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED4AF9819A57F9A1201D9B0 /* Pods-MealPlanCust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealPlanCust.release.xcconfig"; path = "Pods/Target Support Files/Pods-MealPlanCust/Pods-MealPlanCust.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +121,7 @@
 				585C311E19FB5A0000ED9D78 /* AudioToolbox.framework in Frameworks */,
 				585C311C19FB59CF00ED9D78 /* Parse.framework in Frameworks */,
 				585C311A19FB595D00ED9D78 /* FacebookSDK.framework in Frameworks */,
+				AB178D7D125AF1FC4705EED5 /* libPods-MealPlanCust.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +150,7 @@
 				585C312B19FB5A3800ED9D78 /* Security.framework */,
 				585C312D19FB5A3E00ED9D78 /* StoreKit.framework */,
 				585C312F19FB5A4A00ED9D78 /* SystemConfiguration.framework */,
+				80F58C4419FDBAC3A7C4D054 /* libPods-MealPlanCust.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 				585C313119FB5A5900ED9D78 /* Frameworks */,
 				58CD2BF419FB51D60009EAA3 /* MealPlanCustTests */,
 				58CD2BD919FB51D60009EAA3 /* Products */,
+				AA1BC8BAF507890FD3094A93 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +202,8 @@
 				58F50BAE19FDCD4400357533 /* QRCodeViewController.h */,
 				58F50BAF19FDCD4400357533 /* QRCodeViewController.m */,
 				58F50BB019FDCD4400357533 /* QRCodeViewController.xib */,
+				588743371A091F950045430E /* PaymentViewController.h */,
+				588743381A091F950045430E /* PaymentViewController.m */,
 				58CD2BDF19FB51D60009EAA3 /* AppDelegate.h */,
 				58CD2BE019FB51D60009EAA3 /* AppDelegate.m */,
 				58CD2BE819FB51D60009EAA3 /* Images.xcassets */,
@@ -226,6 +238,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA1BC8BAF507890FD3094A93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42EEE4A96EAA910192E89C86 /* Pods-MealPlanCust.debug.xcconfig */,
+				FED4AF9819A57F9A1201D9B0 /* Pods-MealPlanCust.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58CD2BFB19FB51D60009EAA3 /* Build configuration list for PBXNativeTarget "MealPlanCust" */;
 			buildPhases = (
+				66508F9F4606D72B6CE2A415 /* Check Pods Manifest.lock */,
 				58CD2BD419FB51D60009EAA3 /* Sources */,
 				58CD2BD519FB51D60009EAA3 /* Frameworks */,
 				58CD2BD619FB51D60009EAA3 /* Resources */,
+				ED7BF21356DFFB165E70A5A9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +346,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66508F9F4606D72B6CE2A415 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7BF21356DFFB165E70A5A9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MealPlanCust/Pods-MealPlanCust-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58CD2BD419FB51D60009EAA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -335,6 +391,7 @@
 				585C313419FB5B3200ED9D78 /* MHCLoginViewController.m in Sources */,
 				58CD2BE119FB51D60009EAA3 /* AppDelegate.m in Sources */,
 				58D56E2E19FB5D150090E366 /* MTTableViewCell.m in Sources */,
+				588743391A091F950045430E /* PaymentViewController.m in Sources */,
 				58F50BB119FDCD4400357533 /* QRCodeViewController.m in Sources */,
 				58F50BB519FDCDF700357533 /* PFRestaurants.m in Sources */,
 				58D56E3219FB5D460090E366 /* DataCenter.m in Sources */,
@@ -440,6 +497,7 @@
 		};
 		58CD2BFC19FB51D60009EAA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42EEE4A96EAA910192E89C86 /* Pods-MealPlanCust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -455,6 +513,7 @@
 		};
 		58CD2BFD19FB51D60009EAA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED4AF9819A57F9A1201D9B0 /* Pods-MealPlanCust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
