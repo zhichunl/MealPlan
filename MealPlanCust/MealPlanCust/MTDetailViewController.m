@@ -17,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = self.curRestaurant.restaurant_name;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"EST"]];
+    [formatter setDateFormat:@"MM/dd HH:mm"];
+    self.deliveryTime.text = [formatter stringFromDate: self.curRestaurant.expected_delivery_time];
     UINib *nib = [UINib nibWithNibName:@"UITableViewCell" bundle:nil];
     [self.menuItems registerNib:nib
          forCellReuseIdentifier:@"UITableViewCell"];

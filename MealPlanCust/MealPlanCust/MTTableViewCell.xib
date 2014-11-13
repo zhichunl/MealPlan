@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,25 +15,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-56-xzS">
-                        <rect key="frame" x="169" y="11" width="143" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPR-qE-Mqe">
+                        <rect key="frame" x="31" y="11" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPR-qE-Mqe">
-                        <rect key="frame" x="23" y="11" width="126" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-56-xzS">
+                        <rect key="frame" x="177" y="11" width="143" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="143" id="AWY-N6-Gy7"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="lPR-qE-Mqe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9ZG-eI-URm"/>
+                    <constraint firstItem="lPR-qE-Mqe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="GDu-aN-YO3"/>
+                    <constraint firstItem="uvw-56-xzS" firstAttribute="firstBaseline" secondItem="lPR-qE-Mqe" secondAttribute="firstBaseline" id="cGr-Ja-m1b"/>
+                    <constraint firstItem="lPR-qE-Mqe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="hQF-Yp-Pp0"/>
+                    <constraint firstItem="uvw-56-xzS" firstAttribute="baseline" secondItem="lPR-qE-Mqe" secondAttribute="baseline" id="ojA-YG-vSL"/>
+                    <constraint firstAttribute="trailing" secondItem="uvw-56-xzS" secondAttribute="trailing" id="vUa-8n-Y6o"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="deliveryTime" destination="uvw-56-xzS" id="ZY9-ZM-Wgl"/>
                 <outlet property="name" destination="lPR-qE-Mqe" id="VTN-QH-iix"/>
             </connections>
-            <point key="canvasLocation" x="225" y="287"/>
+            <point key="canvasLocation" x="215" y="266"/>
         </tableViewCell>
     </objects>
 </document>

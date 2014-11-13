@@ -26,6 +26,8 @@
     UINib *nib = [UINib nibWithNibName:@"MTTableViewCell" bundle:nil];
     [self.tableView registerNib:nib
          forCellReuseIdentifier:@"MTTableViewCell"];
+    self.restaurants = [NSArray array];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.refreshControl = [[UIRefreshControl alloc]init];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@""];
     [self.refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
@@ -46,6 +48,16 @@
     [self.tableView reloadData];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView
+estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -63,7 +75,8 @@
     PFRestaurants *curRestaurant = [self.restaurants objectAtIndex:indexPath.row];
     cell.name.text = curRestaurant.restaurant_name;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"EST"]];
+    [formatter setDateFormat:@"MM/dd HH:mm"];
     cell.deliveryTime.text = [formatter stringFromDate:curRestaurant.expected_delivery_time];
     return cell;
 }
@@ -118,5 +131,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end
+

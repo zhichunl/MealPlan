@@ -63,7 +63,9 @@
         [objects sortUsingComparator:^NSComparisonResult(PFRestaurants *r1, PFRestaurants*r2) {
             return [r1.expected_delivery_time compare:r2.expected_delivery_time];
         }];
-        [delegate dataFetched:[businesses copy]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [delegate dataFetched:[businesses copy]];
+        });
     });
 }
 
