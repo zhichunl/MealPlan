@@ -28,6 +28,8 @@ class Business(parse_rest.datatypes.Object):
 class Order(parse_rest.datatypes.Object):
     pass
 
+class Menu(parse_rest.datatypes.Object):
+    pass
 
 
 class HomePage(webapp2.RequestHandler):
@@ -74,8 +76,42 @@ class MenuPage(webapp2.RequestHandler):
     def get(self):
         u = self.current_user 
         b = self.business
+        menuList = Menu.Query.filter(restaurant=b)
+        mons = menuList.filter(day_of_week = "monday")
+        tues = menuList.filter(day_of_week = "tuesday")
+        weds = menuList.filter(day_of_week = "wednesday")
+        thurs = menuList.filter(day_of_week = "thursday")
+        fris = menuList.filter(day_of_week = "friday")
         template = lib.HtmlLoader.load_template('menu.html')
-        self.response.write(template.render(u = u, b = b))
+        self.response.write(template.render(u = u, b = b, mons = mons, 
+            tues = tues, weds = weds, thurs = thurs, fris = fris))
+
+    @login_required
+    def post(self):
+        b = self.business
+        day_value = self.request.POST.get('day_value')
+        for (key,value) in self.request.POST.iteritems():
+            if key.startswith("item"):
+                menuId = key.split('_')[2]
+                m = Menu.Query.get(objectId=menuId)
+                if value == "":
+                    m.delete()
+                else:
+                    price = self.request.POST.get('price_value_%s' %menuId)
+                    if price != "":
+                        m.details = value
+                        m.price = int(price)
+                        m.save()
+
+            if key == "new_item_name":
+                if value != "":
+                    price = self.request.POST.get("new_item_price")
+                    if price != "":
+                        m = Menu(restaurant = b, day_of_week = day_value, 
+                            details = value, price = int(price))
+                        m.save()
+        return self.redirect('/menu')
+
 
 class OrderPage(webapp2.RequestHandler):
     @login_required

@@ -25,8 +25,20 @@ h3{
   border-radius: 4px;
 }
 
+.form-save button{
+  width: 20%;
+  margin-top: 10px;
+  padding:7px 0px;
+  font-size: 16px;
+  text-align: center;
+  border-color: white;
+  float:right;
+}
+
 .menu_content{
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #monday{
@@ -47,6 +59,18 @@ h3{
 
 #friday{
   background-color: #c71c22;
+}
+
+input[type="text"].item_name{
+  width: 73%;
+  display: inline;
+
+}
+
+input[type="text"].price_value{
+  width: 25%;
+  display: inline;
+
 }
 
 .sub-header {

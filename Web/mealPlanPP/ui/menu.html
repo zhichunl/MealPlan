@@ -52,86 +52,120 @@
           <h1 class="page-header">Menu</h1>
 
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-4 placeholder menu_block">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
               <div class="menu_inside" id="monday">
                 <h3>Monday</h3>
                 <div class="row placeholders menu_content">
-                   <div class="col-xs-6 col-sm-1 placeholder">
-                   </div>
-                   <div class="col-xs-6 col-sm-7 placeholder item">
-                    <p><input name="item_name" type="text" class="form-control" placeholder="Input an item" required autofocus></p>
+                <form class="form-save" role="form" action="/menu" method="post">
+                  <div class="col-xs-12 placeholder item">
+                    <input name="day_value" type="hidden" value="monday">
+                    {% for menu in mons|sort(attribute='createdAt') %}
+                    <p><input name="item_name_{{menu.objectId}}" type="text" class="form-control item_name" value="{{menu.details}}"autofocus>
+                    <input name="price_value_{{menu.objectId}}" type="text" class="form-control price_value" value="{{menu.price}}"autofocus>
+                    </p>
+                    {% endfor %}
+                    <p><input name="new_item_name" type="text" class="form-control item_name" placeholder="Input an item" autofocus>
+                    <input name="new_item_price" type="text" class="form-control price_value" placeholder="price" autofocus>
+                    </p>
+                    <p class="text-right"><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                    </p>
                   </div>
-                  <div class="col-xs-6 col-sm-3 placeholder price">
-                    <p><input name="price_value" type="text" class="form-control" placeholder="price" required autofocus></p>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 placeholder menu_block">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
               <div class="menu_inside" id="tuesday">
                 <h3>Tuesday</h3>
-                  <div class="row placeholders menu_content">
-                   <div class="col-xs-6 col-sm-1 placeholder">
-                   </div>
-                   <div class="col-xs-6 col-sm-7 placeholder item">
-                    <p><input name="item_name" type="text" class="form-control" placeholder="Input an item" required autofocus></p>
+                <div class="row placeholders menu_content">
+                <form class="form-save" role="form" action="/menu" method="post">
+                  <div class="col-xs-12 placeholder item">
+                    <input name="day_value" type="hidden" value="tuesday">
+                    {% for menu in tues |sort(attribute='createdAt') %}
+                    <p><input name="item_name_{{menu.objectId}}" type="text" class="form-control item_name" value="{{menu.details}}" autofocus>
+                    <input name="price_value_{{menu.objectId}}" type="text" class="form-control price_value" value="{{menu.price}}" autofocus>
+                    </p>
+                    {% endfor %}
+                    <p><input name="new_item_name" type="text" class="form-control item_name" placeholder="Input an item" autofocus>
+                    <input name="new_item_price" type="text" class="form-control price_value" placeholder="price" autofocus>
+                    </p>
+                    <p class="text-right"><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                    </p>
                   </div>
-                  <div class="col-xs-6 col-sm-3 placeholder price">
-                    <p><input name="price_value" type="text" class="form-control" placeholder="price" required autofocus></p>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 placeholder menu_block">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
               <div class="menu_inside" id="wednesday">
                 <h3>Wednesday</h3>
-                  <div class="row placeholders menu_content">
-                   <div class="col-xs-6 col-sm-1 placeholder">
-                   </div>
-                   <div class="col-xs-6 col-sm-7 placeholder item">
-                    <p><input name="item_name" type="text" class="form-control" placeholder="Input an item" required autofocus></p>
+                <div class="row placeholders menu_content">
+                <form class="form-save" role="form" action="/menu" method="post">
+                  <div class="col-xs-12 placeholder item">
+                    <input name="day_value" type="hidden" value="wednesday">
+                    {% for menu in weds |sort(attribute='createdAt')%}
+                    <p><input name="item_name_{{menu.objectId}}" type="text" class="form-control item_name" value="{{menu.details}}" autofocus>
+                    <input name="price_value_{{menu.objectId}}" type="text" class="form-control price_value" value="{{menu.price}}" autofocus>
+                    </p>
+                    {% endfor %}
+                    <p><input name="new_item_name" type="text" class="form-control item_name" placeholder="Input an item" autofocus>
+                    <input name="new_item_price" type="text" class="form-control price_value" placeholder="price" autofocus>
+                    </p>
+                    <p class="text-right"><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                    </p>
                   </div>
-                  <div class="col-xs-6 col-sm-3 placeholder price">
-                    <p><input name="price_value" type="text" class="form-control" placeholder="price" required autofocus></p>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-2 placeholder">
-            </div>
-            <div class="col-xs-6 col-sm-4 placeholder menu_block">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
               <div class="menu_inside" id="thursday">
                 <h3>Thursday</h3>
-                  <div class="row placeholders menu_content">
-                   <div class="col-xs-6 col-sm-1 placeholder">
-                   </div>
-                   <div class="col-xs-6 col-sm-7 placeholder item">
-                    <p><input name="item_name" type="text" class="form-control" placeholder="Input an item" required autofocus></p>
+                <div class="row placeholders menu_content">
+                <form class="form-save" role="form" action="/menu" method="post">
+                  <div class="col-xs-12 placeholder item">
+                    <input name="day_value" type="hidden" value="thursday">
+                    {% for menu in thurs |sort(attribute='createdAt')%}
+                    <p><input name="item_name_{{menu.objectId}}" type="text" class="form-control item_name" value="{{menu.details}}" autofocus>
+                    <input name="price_value_{{menu.objectId}}" type="text" class="form-control price_value" value="{{menu.price}}" autofocus>
+                    </p>
+                    {% endfor %}
+                    <p><input name="new_item_name" type="text" class="form-control item_name" placeholder="Input an item" autofocus>
+                    <input name="new_item_price" type="text" class="form-control price_value" placeholder="price" autofocus>
+                    </p>
+                    <p class="text-right"><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                    </p>
                   </div>
-                  <div class="col-xs-6 col-sm-3 placeholder price">
-                    <p><input name="price_value" type="text" class="form-control" placeholder="price" required autofocus></p>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 placeholder menu_block">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
               <div class="menu_inside" id="friday">
                 <h3>Friday</h3>
-                  <div class="row placeholders menu_content">
-                   <div class="col-xs-6 col-sm-1 placeholder">
-                   </div>
-                   <div class="col-xs-6 col-sm-7 placeholder item">
-                    <p><input name="item_name" type="text" class="form-control" placeholder="Input an item" required autofocus></p>
+                <div class="row placeholders menu_content">
+                <form class="form-save" role="form" action="/menu" method="post">
+                  <div class="col-xs-12 placeholder item">
+                    <input name="day_value" type="hidden" value="friday">
+                    {% for menu in fris |sort(attribute='createdAt')%}
+                    <p><input name="item_name_{{menu.objectId}}" type="text" class="form-control item_name" value="{{menu.details}}" autofocus>
+                    <input name="price_value_{{menu.objectId}}" type="text" class="form-control price_value" value="{{menu.price}}" autofocus>
+                    </p>
+                    {% endfor %}
+                    <p><input name="new_item_name" type="text" class="form-control item_name" placeholder="Input an item" autofocus>
+                    <input name="new_item_price" type="text" class="form-control price_value" placeholder="price" autofocus>
+                    </p>
+                    <p class="text-right"><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                    </p>
                   </div>
-                  <div class="col-xs-6 col-sm-3 placeholder price">
-                    <p><input name="price_value" type="text" class="form-control" placeholder="price" required autofocus></p>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-2 placeholder">
+            <div class="col-xs-12 col-sm-6 col-md-4 placeholder menu_block">
             </div>
           </div>
         </div>
