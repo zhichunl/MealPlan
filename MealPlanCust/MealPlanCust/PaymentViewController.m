@@ -10,27 +10,41 @@
 #import "PTKView.h"
 #import "Stripe.h"
 
-@interface PaymentViewController ()<PTKViewDelegate>
+@interface PaymentViewController ()<PTKViewDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) PTKView *paymentView;
-@property (weak, nonatomic) UIButton *saveButton;
+@property (strong, nonatomic) UIButton *saveButton;
+@property (strong, nonatomic) UIAlertView *alertView;
 @end
 
 @implementation PaymentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(15, 20, 290, 55)];
+    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(40, 100, 290, 55)];
     self.paymentView = view;
+    self.alertView = [[UIAlertView alloc] initWithTitle:@"Not a valid card" message:@"please enter in a valid card!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
     self.paymentView.delegate = self;
-    UIButton *saveButton = [[UIButton alloc]initWithFrame:CGRectMake(145, 45, 30, 10)];
-    self.saveButton = saveButton;
+    self.saveButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.saveButton addTarget:self action:@selector(_save) forControlEvents:UIControlEventAllTouchEvents];
+    self.saveButton.frame = CGRectMake(150, 500, 80, 40);
+    [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    self.saveButton.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.paymentView];
     [self.view addSubview:self.saveButton];
     
 }
 
+-(void)_edit{
+    
+}
+
 - (void)paymentView:(PTKView *)paymentView withCard:(PTKCard *)card isValid:(BOOL)valid{
+
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+   
 }
 
 -(void)_save{
@@ -41,7 +55,7 @@
     card.cvc = self.paymentView.card.cvc;
     [Stripe createTokenWithCard:card completion:^(STPToken *token, NSError *error) {
         if (error) {
-            exit(1);
+            [self.alertView show];
         } else {
             [self createBackendChargeWithToken:token];
         }
@@ -68,15 +82,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
