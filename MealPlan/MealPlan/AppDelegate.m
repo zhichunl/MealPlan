@@ -9,10 +9,11 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
+#import <Parse/Parse.h>
 
 
 #import "MPPHomeTabViewController.h"
-#import "MPPPickUpInfoViewController.h"
+#import "MPPPickupTableViewController.h"
 #import "MPPQRScanViewController.h"
 #import "MPPCheckListViewController.h"
 
@@ -30,7 +31,7 @@
     //  initalize the tab controller and feed it with our three tabs
     //  wrapped in nav controllers
     MPPHomeTabViewController *homeTab = [[MPPHomeTabViewController alloc] init];
-    MPPPickUpInfoViewController *pickUpTab = [[MPPPickUpInfoViewController alloc] init];
+    MPPPickupTableViewController *pickUpTab = [[MPPPickupTableViewController alloc] init];
     MPPQRScanViewController *qrTab = [[MPPQRScanViewController alloc] init];
     MPPCheckListViewController *checklistTab = [[MPPCheckListViewController alloc] init];
     UINavigationController *pickUpNav = [self wrapWithNavController:pickUpTab];
@@ -52,6 +53,9 @@
     [self.window makeKeyAndVisible];
     
     [Fabric with:@[TwitterKit]];
+    
+    [Parse setApplicationId:@"Ana8uuDGOzss5pSfm601do1BStWqojasHz3xELDw"
+                  clientKey:@"mDno0UXB8JPAiy8jGj225C9mfwst5o4zBSXtliD0"];
     return YES;
 }
 
