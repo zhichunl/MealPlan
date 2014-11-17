@@ -10,7 +10,7 @@ handlers:
   static_dir: static/javascript
 
 - url: /stylesheets
-  static_dir: static/css
+  static_dir: static/CSS
 
 - url: /assets
   static_dir: static/assets
