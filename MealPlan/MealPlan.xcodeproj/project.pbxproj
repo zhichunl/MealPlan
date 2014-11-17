@@ -13,16 +13,16 @@
 		58FD031119EF4B5A0062A837 /* MealPlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD031019EF4B5A0062A837 /* MealPlanTests.m */; };
 		97274A3C1A0341D900797D60 /* MPPHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */; };
 		97274A401A0344ED00797D60 /* MPPGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 97274A3F1A0344ED00797D60 /* MPPGlobals.m */; };
+		9736307B1A19C239004E1440 /* MPPCheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736307A1A19C239004E1440 /* MPPCheckListViewController.m */; };
+		9736307E1A19CB7F004E1440 /* MPPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736307D1A19CB7F004E1440 /* MPPButton.m */; };
 		97A23CCF1A032F9B0074908C /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A23CCC1A032F9B0074908C /* TwitterKit.framework */; };
 		97A23CD01A032F9C0074908C /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97A23CCD1A032F9B0074908C /* TwitterKitResources.bundle */; };
 		97A23CD11A032F9C0074908C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A23CCE1A032F9B0074908C /* Fabric.framework */; };
 		97A23CDA1A0336F60074908C /* MPPQRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A23CD91A0336F60074908C /* MPPQRScanViewController.m */; };
-		97A23CDD1A03372E0074908C /* MPPCheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */; };
 		97DA0AB019F1824E0035F095 /* MPPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AAF19F1824E0035F095 /* MPPLoginViewController.m */; };
 		97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB419F1859D0035F095 /* ALView+PureLayout.m */; };
 		97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB619F1859D0035F095 /* NSArray+PureLayout.m */; };
 		97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AB819F1859D0035F095 /* NSLayoutConstraint+PureLayout.m */; };
-		97DA0AC119F191820035F095 /* MPPQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA0AC019F191820035F095 /* MPPQRViewController.m */; };
 		97DDC6071A19972000E76813 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DDC6061A19972000E76813 /* AudioToolbox.framework */; };
 		97DDC6091A19972600E76813 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DDC6081A19972600E76813 /* CFNetwork.framework */; };
 		97DDC60B1A19972C00E76813 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DDC60A1A19972C00E76813 /* CoreGraphics.framework */; };
@@ -65,13 +65,15 @@
 		97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPHomeTabViewController.m; sourceTree = "<group>"; };
 		97274A3E1A0344ED00797D60 /* MPPGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPPGlobals.h; path = ../MPPGlobals.h; sourceTree = "<group>"; };
 		97274A3F1A0344ED00797D60 /* MPPGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPPGlobals.m; path = ../MPPGlobals.m; sourceTree = "<group>"; };
+		973630791A19C239004E1440 /* MPPCheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPCheckListViewController.h; sourceTree = "<group>"; };
+		9736307A1A19C239004E1440 /* MPPCheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPCheckListViewController.m; sourceTree = "<group>"; };
+		9736307C1A19CB7F004E1440 /* MPPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPButton.h; sourceTree = "<group>"; };
+		9736307D1A19CB7F004E1440 /* MPPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPButton.m; sourceTree = "<group>"; };
 		97A23CCC1A032F9B0074908C /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		97A23CCD1A032F9B0074908C /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		97A23CCE1A032F9B0074908C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		97A23CD81A0336F60074908C /* MPPQRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPQRScanViewController.h; sourceTree = "<group>"; };
 		97A23CD91A0336F60074908C /* MPPQRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPQRScanViewController.m; sourceTree = "<group>"; };
-		97A23CDB1A03372E0074908C /* MPPCheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPCheckListViewController.h; sourceTree = "<group>"; };
-		97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPCheckListViewController.m; sourceTree = "<group>"; };
 		97DA0AAE19F1824E0035F095 /* MPPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPLoginViewController.h; sourceTree = "<group>"; };
 		97DA0AAF19F1824E0035F095 /* MPPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPLoginViewController.m; sourceTree = "<group>"; };
 		97DA0AB319F1859D0035F095 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		97DA0AB919F1859D0035F095 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		97DA0ABA19F1859D0035F095 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		97DA0ABB19F1859D0035F095 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
-		97DA0ABF19F191820035F095 /* MPPQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPQRViewController.h; sourceTree = "<group>"; };
-		97DA0AC019F191820035F095 /* MPPQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPQRViewController.m; sourceTree = "<group>"; };
 		97DDC6061A19972000E76813 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97DDC6081A19972600E76813 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		97DDC60A1A19972C00E76813 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +161,10 @@
 		58FD02F319EF4B5A0062A837 /* MealPlan */ = {
 			isa = PBXGroup;
 			children = (
+				9736307C1A19CB7F004E1440 /* MPPButton.h */,
+				9736307D1A19CB7F004E1440 /* MPPButton.m */,
+				973630791A19C239004E1440 /* MPPCheckListViewController.h */,
+				9736307A1A19C239004E1440 /* MPPCheckListViewController.m */,
 				97DDC61D1A199DBF00E76813 /* MPPPickupTableViewController.h */,
 				97DDC61E1A199DBF00E76813 /* MPPPickupTableViewController.m */,
 				97DDC62A1A19A8D900E76813 /* MPPRestDetailViewController.h */,
@@ -177,10 +181,6 @@
 				97274A3B1A0341D900797D60 /* MPPHomeTabViewController.m */,
 				97A23CD81A0336F60074908C /* MPPQRScanViewController.h */,
 				97A23CD91A0336F60074908C /* MPPQRScanViewController.m */,
-				97A23CDB1A03372E0074908C /* MPPCheckListViewController.h */,
-				97A23CDC1A03372E0074908C /* MPPCheckListViewController.m */,
-				97DA0ABF19F191820035F095 /* MPPQRViewController.h */,
-				97DA0AC019F191820035F095 /* MPPQRViewController.m */,
 				97DA0AB119F1852F0035F095 /* External Libraries */,
 				58FD030119EF4B5A0062A837 /* Images.xcassets */,
 				58FD02F419EF4B5A0062A837 /* Supporting Files */,
@@ -384,11 +384,11 @@
 				58FD02FA19EF4B5A0062A837 /* AppDelegate.m in Sources */,
 				97DDC6291A19A26100E76813 /* MPPDeliverer.m in Sources */,
 				58FD02F719EF4B5A0062A837 /* main.m in Sources */,
+				9736307E1A19CB7F004E1440 /* MPPButton.m in Sources */,
 				97274A401A0344ED00797D60 /* MPPGlobals.m in Sources */,
-				97DA0AC119F191820035F095 /* MPPQRViewController.m in Sources */,
-				97A23CDD1A03372E0074908C /* MPPCheckListViewController.m in Sources */,
 				97DA0ABC19F1859D0035F095 /* ALView+PureLayout.m in Sources */,
 				97DA0ABD19F1859D0035F095 /* NSArray+PureLayout.m in Sources */,
+				9736307B1A19C239004E1440 /* MPPCheckListViewController.m in Sources */,
 				97A23CDA1A0336F60074908C /* MPPQRScanViewController.m in Sources */,
 				97DA0ABE19F1859D0035F095 /* NSLayoutConstraint+PureLayout.m in Sources */,
 			);

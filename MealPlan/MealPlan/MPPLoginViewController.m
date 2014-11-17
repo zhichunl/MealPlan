@@ -10,7 +10,7 @@
 #import <TwitterKit/TwitterKit.h>
 #import "PureLayout.h"
 #import "MPPLoginViewController.h"
-#import "MPPQRViewController.h"
+
 
 
 @interface MPPLoginViewController ()

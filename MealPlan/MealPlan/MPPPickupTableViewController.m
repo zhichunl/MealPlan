@@ -146,7 +146,7 @@
 
     
     cell.textLabel.text = [object objectForKey:@"restaurant_name"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Pickup time: %@", [object objectForKey:@"deliverer_pickup_time"]];
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"Pickup time: %@", [object objectForKey:@"deliverer_pickup_time"]];
     
     return cell;
 }
