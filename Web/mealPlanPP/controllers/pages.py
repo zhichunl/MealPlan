@@ -5,6 +5,7 @@ import lib
 import httplib
 import urllib
 import parse_rest
+import datetime
 from parse_rest.user import User
 from parse_rest.core import ResourceRequestNotFound
 
@@ -69,7 +70,26 @@ class ProfilePage(webapp2.RequestHandler):
         u = self.current_user
         b = self.business
         template = lib.HtmlLoader.load_template('profile.html')
+        print type(b.deliverer_pickup_time)
         self.response.write(template.render(u = u, b = b))
+
+    @login_required
+    def post(self):
+        b = self.business
+        for (key,value) in self.request.POST.iteritems():
+            if key == "restuarant_name":
+                b.restaurant_name = value
+            elif key == "phone_number":
+                b.phone_number = value
+            elif key == "business_hours":
+                b.business_hours = value
+            elif key == "pickup_time":
+                b.deliverer_pickup_time.replace(hour = int(value[:2]), minute = int(value[-2:]))
+            elif key == "address":
+                b.address = value
+        b.save()
+        return self.redirect('/profile')
+
 
 class MenuPage(webapp2.RequestHandler):
     @login_required
@@ -119,5 +139,13 @@ class OrderPage(webapp2.RequestHandler):
         u = self.current_user 
         b = self.business
         orderList = Order.Query.filter(restaurant=b)
+
+        for order in orderList:
+            detailList = []
+            for ID in order.menu_item:
+                detailList.extend([m.details for m in Menu.Query.filter(objectId = ID)])
+            order.details = ', '.join(detailList)
+            order.save()
+
         template = lib.HtmlLoader.load_template('order.html')
         self.response.write(template.render(u = u, b = b, orderList = orderList))
