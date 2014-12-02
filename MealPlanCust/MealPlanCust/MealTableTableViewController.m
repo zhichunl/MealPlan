@@ -84,7 +84,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MTDetailViewController *dvc = [[MTDetailViewController alloc] init];
     dvc.curRestaurant = [self.restaurants objectAtIndex:indexPath.row];
-    dvc.menu = dvc.curRestaurant.menu;
+    [dvc settheMenu:dvc.curRestaurant.menu];
     [self.navigationController pushViewController:dvc animated:YES];
 }
 

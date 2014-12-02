@@ -10,6 +10,7 @@
 
 #import "MPPButton.h"
 #import "PureLayout.h"
+#import <Foundation/Foundation.h>
 
 static CGFloat const MPPRestDetailViewController_PaddingX = 20.0;
 static CGFloat const MPPRestDetailViewController_PaddingY = 20.0;
@@ -29,7 +30,12 @@ static CGFloat const MPPRestDetailViewController_PaddingY = 20.0;
 @property (nonatomic) UILabel *ordersBody;
 
 @property (nonatomic) MPPButton *statusButton;
-
+@property (nonatomic) NSMutableArray *orderCounts;
+@property (nonatomic) NSArray *orderItems;
+@property (nonatomic) int orderStatus;// 0: waiting for pickup
+                                       // 1: waiting for delivery
+                                       // 2: delivered
+@property (nonatomic) NSArray *allOrders;
 @end
 
 @implementation MPPRestDetailViewController
@@ -182,13 +188,13 @@ static CGFloat const MPPRestDetailViewController_PaddingY = 20.0;
 
 - (void)fetchOrdersAndStatus {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        NSArray *orderItems = [self queryForMenuItems];
+        self.orderItems = [self queryForMenuItems];
+        [self queryForMenuCountsAndStatus];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self updateOrdersStringWithItems:orderItems];
-            
-            if (orderItems.count > 0) {
-                PFObject *firstOrder = [orderItems firstObject];
+            [self updateOrdersStringWithItems:self.orderItems];
+            if (self.orderItems.count > 0) {
+                PFObject *firstOrder = [self.orderItems firstObject];
                 [self updateStatusButtonStringWithCurrentStatus:[firstOrder objectForKey:@"Status"]];
             }
         });
@@ -249,6 +255,54 @@ static CGFloat const MPPRestDetailViewController_PaddingY = 20.0;
     NSArray *menus = [query findObjects];
     return menus;
 }
+
+- (void) queryForMenuCountsAndStatus {
+    // build a list containing all the string of the objectIds of
+    //NSMutableArray *orderItemObjectIds = [NSMutableArray array];
+    self.orderCounts = [NSMutableArray array];
+    for (PFObject *orderItem in self.orderItems) {
+        //[orderItemObjectIds addObject: orderItem.objectId];
+    
+        PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+        [query whereKey:@"menu_item" containsAllObjectsInArray: [NSArray arrayWithObject: orderItem.objectId]];
+        NSArray *orders = [query findObjects];
+        [self.orderCounts addObject:@([orders count])];
+    }
+    // update the order status on this page
+    PFQuery *query2 = [PFQuery queryWithClassName:@"Order"];
+    [query2 whereKey:@"restaurant" equalTo:self.restaurant.objectId]; // TODO!!!!! Left off here equal doesn't work!!!!!!!
+     self.allOrders = [query2 findObjects];
+    self.orderStatus = 0;
+    if ([self checkCheckedIn: self.allOrders]) {
+        self.orderStatus = 1;
+        if ([self checkAllDelivered: self.allOrders ]) {
+            self.orderStatus = 2;
+        }
+    }
+}
+
+
+- (BOOL) checkCheckedIn: (NSArray *)orders{
+    // check if all got picked up
+    for (PFObject *order in orders) {
+        if (![order objectForKey: @"checked_in"]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (BOOL) checkAllDelivered: (NSArray *)orders{
+    // check if all got picked up
+    for (PFObject *order in orders) {
+        
+        if (![order objectForKey: @"delivered"]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 #pragma mark - Helpers
 
