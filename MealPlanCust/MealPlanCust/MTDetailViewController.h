@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *menuItems;
 @property (strong, nonatomic) PFRestaurants *curRestaurant;
 @property (strong, nonatomic) NSArray *menu;
+
+-(void)settheMenu:(NSArray *)menu;
 @end
