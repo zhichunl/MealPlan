@@ -110,12 +110,14 @@ class MenuPage(webapp2.RequestHandler):
     def post(self):
         b = self.business
         day_value = self.request.POST.get('day_value')
+        idList = set(b.menu)
         for (key,value) in self.request.POST.iteritems():
             if key.startswith("item"):
                 menuId = key.split('_')[2]
                 m = Menu.Query.get(objectId=menuId)
                 if value == "":
                     m.delete()
+                    idList.remove(m.objectId)
                 else:
                     price = self.request.POST.get('price_value_%s' %menuId)
                     if price != "":
@@ -130,6 +132,9 @@ class MenuPage(webapp2.RequestHandler):
                         m = Menu(restaurant = b, day_of_week = day_value, 
                             details = value, price = int(price))
                         m.save()
+                        idList.add(m.objectId)
+        b.menu = list(idList)
+        b.save()
         return self.redirect('/menu')
 
 
