@@ -145,12 +145,12 @@ class OrderPage(webapp2.RequestHandler):
         b = self.business
         orderList = Order.Query.filter(restaurant=b)
 
-        for order in orderList:
-            detailList = []
-            for ID in order.menu_item:
-                detailList.extend([m.details for m in Menu.Query.filter(objectId = ID)])
-            order.details = ', '.join(detailList)
-            order.save()
+        # for order in orderList:
+        #     detailList = []
+        #     for ID in order.menu_item:
+        #         detailList.extend([m.details for m in Menu.Query.filter(objectId = ID)])
+        #     order.details = ', '.join(detailList)
+        #     order.save()
 
         template = lib.HtmlLoader.load_template('order.html')
         self.response.write(template.render(u = u, b = b, orderList = orderList))
